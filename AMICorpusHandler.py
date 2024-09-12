@@ -189,7 +189,7 @@ class AMICorpusHandler:
         """
         # parse an xml file by name
         mydoc = minidom.parse(summary_dir + summary_filename)
-        items = mydoc.getElementsByTagName('abstract')
+        items = mydoc.getElementsByTagName('actions')
         summary = items[0].firstChild.nextSibling.firstChild.data
 
         # Save summary
@@ -213,7 +213,7 @@ class AMICorpusHandler:
         """
         # parse an xml file by name
         mydoc = minidom.parse(summary_dir + summary_filename)
-        items = mydoc.getElementsByTagName('abstract')
+        items = mydoc.getElementsByTagName('actions')
         items_sentences = items[0].getElementsByTagName('sentence')
         summary = ''
         for item in items_sentences:
